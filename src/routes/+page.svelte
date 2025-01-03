@@ -19,4 +19,5 @@
             </div>
         </div>
     </div>
+    <img src="/browser.gif" />
 </div>
