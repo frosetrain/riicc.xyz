@@ -1,7 +1,13 @@
 <div class="m-4">
     <h1 class="font-bold text-4xl mb-4">RIICC Project Showcase</h1>
 
-    <h2 class="font-bold text-2xl">Cratch Shackathon</h2>
+    <h2 class="font-bold text-2xl">Open House + Raffles Trail website</h2>
+    <a class="text-blue-700 underline" href="https://riicc-open-house.web.app/">https://riicc-open-house.web.app/</a>
+
+    <h2 class="font-bold text-2xl mt-4">Showcase of personal projects</h2>
+    <a class="text-blue-700 underline" href="https://tinyurl.com/hisriram">https://tinyurl.com/hisriram</a>
+
+    <h2 class="font-bold text-2xl mt-4">Cratch Shackathon</h2>
     <p>A goofy ahh cca event where teams had 2 hours to make something</p>
     <p>Ranked in order of how good they are</p>
     <ol class="list-decimal list-inside">
