@@ -10,27 +10,27 @@
     <p class="font-medium text-xl mt-8 mb-2 block">Back Designs</p>
     <Splide
         options={{
-            padding: "8rem",
+            padding: "20%",
             gap: "1rem",
             heightRatio: 4 / 3,
         }}
         aria-label="Back Designs"
     >
-        <SplideSlide class="bg-red-500">
+        <SplideSlide>
             <img class="h-full" src="/mockups/back1.jpg" alt="Design 1" />
-            <p class="absolute top-2 left-4 font-bold text-xl">Design 1</p>
+            <p class="absolute bg-gray-100/80 top-2 left-4 px-2 font-bold text-xl">Design 1</p>
         </SplideSlide>
-        <SplideSlide class="bg-red-500">
+        <SplideSlide>
             <img class="h-full" src="/mockups/back2.jpg" alt="Design 2" />
-            <p class="absolute top-2 left-4 font-bold text-xl">Design 2</p>
+            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 2</p>
         </SplideSlide>
-        <SplideSlide class="bg-red-500">
+        <SplideSlide>
             <img class="h-full" src="/mockups/back3.jpg" alt="Design 3" />
-            <p class="absolute top-2 left-4 font-bold text-xl">Design 3</p>
+            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 3</p>
         </SplideSlide>
-        <SplideSlide class="bg-red-500">
+        <SplideSlide>
             <img class="h-full" src="/mockups/back4.jpg" alt="Design 4" />
-            <p class="absolute top-2 left-4 font-bold text-xl">Design 4</p>
+            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 4</p>
         </SplideSlide>
     </Splide>
     <hr class="w-48 h-1 mx-auto bg-gray-300 border-0 rounded-sm my-10" />
