@@ -2,7 +2,14 @@
     import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide";
     import "@splidejs/svelte-splide/css";
 
-    const backMockups = ["/mockups/back1.jpg", "/mockups/back2.jpg", "/mockups/back3.jpg", "/mockups/back4.jpg"];
+    const backMockups = [
+        "/mockups/back1.jpg",
+        "/mockups/back2.jpg",
+        "/mockups/back3.jpg",
+        "/mockups/back4.jpg",
+        "/mockups/back5.jpg",
+        "/mockups/back6.jpg",
+    ];
 </script>
 
 <div class="max-w-screen-sm p-4 mx-auto">
