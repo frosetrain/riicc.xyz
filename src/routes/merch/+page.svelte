@@ -1,13 +1,15 @@
 <script>
     import { Splide, SplideSlide, SplideTrack } from "@splidejs/svelte-splide";
     import "@splidejs/svelte-splide/css";
+
+    const backMockups = ["/mockups/back1.jpg", "/mockups/back2.jpg", "/mockups/back3.jpg", "/mockups/back4.jpg"];
 </script>
 
 <div class="max-w-screen-sm p-4 mx-auto">
     <p class="font-bold text-3xl">RIICC Merch</p>
-    <p class="font-medium text-xl mt-8 mb-2">Front Design</p>
-    <img src="/mockups/front.jpg" class="max-w-80" alt="Front design" />
-    <p class="font-medium text-xl mt-8 mb-2 block">Back Designs</p>
+    <p class="font-semibold text-xl mt-8 mb-2">Front Design</p>
+    <img src="/mockups/front.jpg" class="rounded-md max-w-80" alt="Front design" />
+    <p class="font-semibold text-xl mt-8 mb-2 block">Back Designs</p>
     <Splide
         options={{
             padding: "20%",
@@ -16,22 +18,12 @@
         }}
         aria-label="Back Designs"
     >
-        <SplideSlide>
-            <img class="h-full" src="/mockups/back1.jpg" alt="Design 1" />
-            <p class="absolute bg-gray-100/80 top-2 left-4 px-2 font-bold text-xl">Design 1</p>
-        </SplideSlide>
-        <SplideSlide>
-            <img class="h-full" src="/mockups/back2.jpg" alt="Design 2" />
-            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 2</p>
-        </SplideSlide>
-        <SplideSlide>
-            <img class="h-full" src="/mockups/back3.jpg" alt="Design 3" />
-            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 3</p>
-        </SplideSlide>
-        <SplideSlide>
-            <img class="h-full" src="/mockups/back4.jpg" alt="Design 4" />
-            <p class="absolute top-2 bg-gray-100/80 left-4 px-2 font-bold text-xl">Design 4</p>
-        </SplideSlide>
+        {#each backMockups as filename, index}
+            <SplideSlide>
+                <img class="h-full rounded-md" src={filename} alt="Design 1" />
+                <p class="absolute bg-emerald-500/50 backdrop-blur-sm rounded top-2 left-2 px-2 font-medium text-lg">Design {index + 1}</p>
+            </SplideSlide>
+        {/each}
     </Splide>
     <hr class="w-48 h-1 mx-auto bg-gray-300 border-0 rounded-sm my-10" />
     <div>
