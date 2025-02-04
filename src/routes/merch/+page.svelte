@@ -6,9 +6,6 @@
         "/mockups/back1.jpg",
         "/mockups/back2.jpg",
         "/mockups/back3.jpg",
-        "/mockups/back4.jpg",
-        "/mockups/back5.jpg",
-        "/mockups/back6.jpg",
     ];
 </script>
 
