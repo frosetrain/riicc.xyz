@@ -16,7 +16,7 @@ export default function Header(props) {
         >
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-16">
                 <a href="/" className="-m-1.5 p-1.5">
-                    <img src="riicc-onlight.svg" className="h-10 w-auto" />
+                    <img src="/riicc-onlight.svg" className="h-10 w-auto" />
                 </a>
                 <div className="flex sm:hidden">
                     <button
@@ -44,7 +44,7 @@ export default function Header(props) {
                 <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="https://riicc.xyz/" className="-m-1.5 p-1.5">
-                            <img src="riicc-onlight.svg" className="h-10 w-auto" />
+                            <img src="/riicc-onlight.svg" className="h-10 w-auto" />
                         </a>
                         <button type="button" onClick={() => setMobileMenuOpen(false)} className="-m-2.5 rounded-sm p-2.5 text-gray-700">
                             <XMarkIcon aria-hidden="true" className="size-6" />
