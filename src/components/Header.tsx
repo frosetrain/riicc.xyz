@@ -41,7 +41,7 @@ export default function Header(props) {
             </nav>
             <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="sm:hidden">
                 <div className="fixed inset-0 z-10" />
-                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="https://riicc.xyz/" className="-m-1.5 p-1.5">
                             <img src="riicc-onlight.svg" className="h-10 w-auto" />
