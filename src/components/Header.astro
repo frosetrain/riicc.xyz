@@ -1,0 +1,13 @@
+---
+const { fixed } = Astro.props;
+console.log(fixed);
+---
+
+<div
+    id={fixed ? "fixed-header" : "header"}
+    class:list={[fixed ? "fixed" : "", "h-20 shadow-lg flex items-center px-8 justify-between bg-white w-full"]}
+>
+    <p class="basis-0 grow"></p>
+    <img src="riicc-onlight.svg" class="h-12" />
+    <p class="basis-0 grow text-end">Hello, world!</p>
+</div>
