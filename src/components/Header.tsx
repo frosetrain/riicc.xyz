@@ -4,15 +4,19 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-export default function Header(props) {
+export interface Props {
+    type: string;
+}
+
+export default function Header(props: Props) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-    let fixed = props.type;
+    let type = props.type;
 
     return (
         <header
-            id={fixed === "animated" ? "fixed-header" : "header"}
-            className={"w-full bg-white shadow-md inset-shadow-sm" + (fixed === "animated" ? " fixed top-0" : "")}
-            data-speed={fixed === "static" ? "0.32" : "1"}
+            id={type === "animated" ? "fixed-header" : "header"}
+            className={"w-full bg-white shadow-md inset-shadow-sm" + (type === "animated" || type === "normal" ? " fixed top-0" : "")}
+            data-speed={type === "static" ? "0.32" : "1"}
         >
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-16">
                 <a href="/" className="-m-1.5 p-1.5">
@@ -28,13 +32,13 @@ export default function Header(props) {
                     </button>
                 </div>
                 <div className="hidden sm:flex sm:gap-x-12">
-                    <a href="/about" className="text-md/6 font-semibold text-gray-900">
+                    <a href="/about" className="text-md/6 font-medium text-gray-900">
                         About
                     </a>
-                    <a href="/activities" className="text-md/6 font-semibold text-gray-900">
+                    <a href="/activities" className="text-md/6 font-medium text-gray-900">
                         Activities
                     </a>
-                    <a href="/updates" className="text-md/6 font-semibold text-gray-900">
+                    <a href="/updates" className="text-md/6 font-medium text-gray-900">
                         Updates
                     </a>
                 </div>
@@ -53,21 +57,18 @@ export default function Header(props) {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
-                                <a
-                                    href="/about"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                                >
+                                <a href="/about" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-gray-900 hover:bg-gray-50">
                                     About
                                 </a>
                                 <a
                                     href="/activities"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-gray-900 hover:bg-gray-50"
                                 >
                                     Activities
                                 </a>
                                 <a
                                     href="/updates"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-gray-900 hover:bg-gray-50"
                                 >
                                     Updates
                                 </a>
