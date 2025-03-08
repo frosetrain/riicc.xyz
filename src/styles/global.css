@@ -1,1 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@theme {
+    --text-md: 0.9375rem;
+}
