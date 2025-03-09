@@ -40,7 +40,7 @@ export default function Header(props: Props) {
                         <Bars3Icon aria-hidden="true" className="size-6" />
                     </button>
                 </div>
-                <div className="font-display hidden sm:flex sm:gap-x-12">
+                <div className="hidden sm:flex sm:gap-x-12">
                     <a href="/about" className="text-md/6 font-medium text-gray-900 dark:text-white">
                         About
                     </a>
@@ -70,7 +70,7 @@ export default function Header(props: Props) {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/10">
-                            <div className="font-display space-y-2 py-6">
+                            <div className="space-y-2 py-6">
                                 <a
                                     href="/about"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-medium text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-900"
