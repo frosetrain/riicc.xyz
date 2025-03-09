@@ -1,5 +1,16 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @theme {
+    --font-sans: "Instrument Sans", system-ui, sans-serif;
+    --font-display: "Hubot Sans", system-ui, sans-serif;
     --text-md: 0.9375rem;
+}
+
+@font-face {
+    font-family: "Hubot Sans";
+    src:
+        url("/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+        url("/fonts/Hubot-Sans.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
 }

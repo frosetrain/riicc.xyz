@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="About">
     <Header client:load type="normal" />
     <article
-        class="prose dark:prose-invert xl:prose-lg px-4 py-10 max-w-3xl mx-auto mt-18 sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl"
+        class="prose dark:prose-invert prose-headings:font-display xl:prose-lg px-4 py-10 max-w-3xl mx-auto mt-18 sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl"
     >
         <h1>About</h1>
         <p>
@@ -14,6 +15,7 @@ import Header from "../components/Header";
             improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
             being a part of our journey.
         </p>
+        <h2>Here’s a heading!</h2>
         <p>
             This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
             improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
@@ -45,4 +47,5 @@ import Header from "../components/Header";
             being a part of our journey.
         </p>
     </article>
+    <Footer />
 </Layout>
