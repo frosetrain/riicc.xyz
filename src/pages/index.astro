@@ -15,15 +15,21 @@ import Footer from "../components/Footer.astro";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("[data-speed]", {
-        y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
-        ease: "none",
-        scrollTrigger: {
-            start: 0,
-            end: "max",
-            invalidateOnRefresh: true,
-            scrub: 1.2,
-        },
+    gsap.fromTo(".floppy", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out", stagger: 0.12 });
+
+    gsap.utils.toArray(".floppy").forEach((el: any, i: number) => {
+        console.log(el, i);
+        const speed = parseFloat(el.getAttribute("data-speed")!);
+        gsap.to(el, {
+            y: (1 - speed) * ScrollTrigger.maxScroll(window),
+            ease: "none",
+            scrollTrigger: {
+                start: 0,
+                end: "max",
+                invalidateOnRefresh: true,
+                scrub: (4.5 - i) / 2.25,
+            },
+        });
     });
 
     gsap.fromTo(
@@ -48,11 +54,11 @@ import Footer from "../components/Footer.astro";
     <Header client:load type="animated" />
     <div class="pt-8 bg-white dark:bg-black w-full">
         <div class="sm:max-w-[80vw] lg:max-w-[70vw] mx-auto px-4">
-            <Image data-speed="0.32" class="relative w-full mb-[-20%] z-40" src={floppy_1} alt="Floppy" />
-            <Image data-speed="0.49" class="relative w-full mb-[-20%] z-30" src={floppy_2} alt="Floppy" />
-            <Image data-speed="0.66" class="relative w-full mb-[-20%] z-20" src={floppy_3} alt="Floppy" />
-            <Image data-speed="0.83" class="relative w-full mb-[-20%] z-10" src={floppy_4} alt="Floppy" />
-            <Image data-speed="1.00" class="relative w-full" src={floppy_5} alt="Floppy" />
+            <Image data-speed="0.32" class="floppy relative w-full mb-[-20%] z-40" src={floppy_1} alt="Floppy" />
+            <Image data-speed="0.49" class="floppy relative w-full mb-[-20%] z-30" src={floppy_2} alt="Floppy" />
+            <Image data-speed="0.66" class="floppy relative w-full mb-[-20%] z-20" src={floppy_3} alt="Floppy" />
+            <Image data-speed="0.83" class="floppy relative w-full mb-[-20%] z-10" src={floppy_4} alt="Floppy" />
+            <Image data-speed="1.00" class="floppy relative w-full" src={floppy_5} alt="Floppy" />
         </div>
     </div>
     <div id="amogus" class="h-8 w-full bg-white dark:bg-black"></div>

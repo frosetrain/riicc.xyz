@@ -24,7 +24,6 @@ export default function Header(props: Props) {
                 " " +
                 (type === "static" ? "dark:bg-black/50" : "dark:bg-gray-900/50")
             }
-            data-speed={type === "static" ? "1" : "1"}
         >
             <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-16">
                 <a href="/" className="-m-1.5 p-1.5">
