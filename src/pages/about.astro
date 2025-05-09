@@ -1,49 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
+import { ModeToggle } from "../components/ModeToggle";
+import { Component } from "../components/chart.tsx";
 ---
 
 <Layout title="About">
-    <article
-        class="prose dark:prose-invert prose-headings:font-display lg:prose-lg px-4 py-10 max-w-3xl mx-auto mt-18 sm:px-6 sm:py-12 lg:max-w-4xl lg:py-16 lg:px-8 xl:max-w-6xl"
-    >
-        <h1>About</h1>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <h2>Here’s a heading!</h2>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
-        <p>
-            This is real and not fake. We are committed to providing the best services to our customers. Our team is dedicated to continuous
-            improvement and innovation. We believe in transparency, integrity, and excellence in all our endeavors. Thank you for choosing us and
-            being a part of our journey.
-        </p>
+    <article class="px-4 max-w-3xl pb-8 mx-auto mt-18">
+        <div>
+            <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">About</h1>
+            <p class="leading-7 [&:not(:first-child)]:mt-6">
+                The Raffles Institution Infocomm Club is a place for students to discover their interests in technology. We give every member an
+                opportunity to discover new skills, develop their own projects, and grow together with a community.
+            </p>
+            <ModeToggle client:load />
+            <h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">Activities</h2>
+            <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+                <li>Robotics</li>
+                <li>CP·IO (Competitive Programming and Informatics Olympiad)</li>
+                <li>Red (Cybersecurity)</li>
+                <li>Figma</li>
+                <li>Meta Digital Skills Programme: Artificial Intelligence</li>
+                <li>Swift Coding Club</li>
+            </ul>
+            <h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">Competitions</h2>
+            <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+                <li>National Youth Tech Championship (Champions, 2024)</li>
+                <li>National Olympiad in Informatics</li>
+                <li>World Robot Olympiad</li>
+                <li>IDE Series</li>
+                <li>Sentinel Challenge</li>
+                <li>Singapore VEX Tournament</li>
+            </ul>
+            <p class="leading-7 [&:not(:first-child)]:mt-6">Our CCA sessions are held every Friday from 1.30pm to 3.30pm.</p>
+        </div>
     </article>
     <Footer />
 </Layout>

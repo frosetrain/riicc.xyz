@@ -5,14 +5,13 @@ import floppy_2 from "../assets/floppy_2.svg";
 import floppy_3 from "../assets/floppy_3.svg";
 import floppy_4 from "../assets/floppy_4.svg";
 import floppy_5 from "../assets/floppy_5.svg";
+import robolab from "../assets/robolab.jpg";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<script></script>
-
 <Layout title="">
-    <div class="pt-8 bg-white dark:bg-neutral-900 w-full floppy-stack">
+    <div class="pt-8 w-full floppy-stack">
         <div class="sm:max-w-[80vw] lg:max-w-[70vw] mx-auto px-4 text-[0px] relative">
             <Image loading="lazy" class="floppy w-full relative z-40" src={floppy_1} alt="Floppy" />
             <Image loading="lazy" class="floppy w-full relative -mt-[30%] z-30" src={floppy_2} alt="Floppy" />
@@ -22,15 +21,41 @@ import Footer from "../components/Footer.astro";
         </div>
     </div>
     <div class="px-4 pt-8 w-full text-black dark:text-white">
-        <p class="font-bold font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-center my-8">
+        <p class="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-center my-8">
             Raffles Institution<br />
             <span
                 class="dark:from-emerald-400 dark:to-indigo-400 bg-gradient-to-r from-25% from-emerald-600 to-indigo-600 bg-clip-text text-transparent font-black"
                 >Infocomm Club</span
             >
         </p>
-        <p class="mb-[700px] text-center">This website is under development. Check back soon.</p>
-        <p class="text-center">hi</p>
+        <article class="px-4 max-w-3xl pb-8 mx-auto mt-18">
+            <div>
+                <p class="leading-7 [&:not(:first-child)]:mt-6">
+                    The Raffles Institution Infocomm Club is a place for students to discover their interests in technology. We give every member an
+                    opportunity to discover new skills, develop their own projects, and grow together with a community.
+                </p>
+                <h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">Activities</h2>
+                <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+                    <li>Robotics</li>
+                    <li>CP·IO (Competitive Programming and Informatics Olympiad)</li>
+                    <li>Red (Cybersecurity)</li>
+                    <li>Figma</li>
+                    <li>Meta Digital Skills Programme: Artificial Intelligence</li>
+                    <li>Swift Coding Club</li>
+                </ul>
+                <h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">Competitions</h2>
+                <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+                    <li>National Youth Tech Championship (Champions, 2024)</li>
+                    <li>National Olympiad in Informatics</li>
+                    <li>World Robot Olympiad</li>
+                    <li>IDE Series</li>
+                    <li>Sentinel Challenge</li>
+                    <li>Singapore VEX Tournament</li>
+                </ul>
+                <p class="leading-7 [&:not(:first-child)]:mt-6">Our CCA sessions are held every Friday from 1.30pm to 3.30pm.</p>
+            </div>
+        </article>
+        <Image src={robolab} alt="An RIICC sign in the Robolab." />
+        <Footer />
     </div>
-    <Footer />
 </Layout>
