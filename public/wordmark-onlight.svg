@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="48.412384mm"
+   height="10.438332mm"
+   viewBox="0 0 48.412384 10.438332"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.1 (93de688d07, 2025-03-30)"
+   sodipodi:docname="wordmark-onlight.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="2.3090909"
+     inkscape:cx="70.807087"
+     inkscape:cy="67.992126"
+     inkscape:window-width="1440"
+     inkscape:window-height="888"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient2"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#059669;stop-opacity:1;"
+         offset="0.24827342"
+         id="stop2" />
+      <stop
+         style="stop-color:#4f46e5;stop-opacity:1;"
+         offset="1"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2"
+       id="linearGradient3"
+       x1="74.539542"
+       y1="71.086843"
+       x2="117.65177"
+       y2="71.086843"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-71.88946,-62.762356)">
+    <text
+       xml:space="preserve"
+       style="font-style:oblique;font-weight:900;font-size:5.64444px;line-height:1.7;font-family:Iosevka;-inkscape-font-specification:'Iosevka Heavy Oblique';font-variant-ligatures:no-contextual;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;stroke-width:0.2;stroke-linejoin:round"
+       x="71.499992"
+       y="66.916664"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'Mona Sans';-inkscape-font-specification:'Mona Sans Bold';stroke-width:0.2"
+         x="71.499992"
+         y="66.916664">Raffles Institution</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:5.64444px;line-height:1.7;font-family:'Mona Sans';-inkscape-font-specification:'Mona Sans Bold';font-variant-ligatures:no-contextual;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient3);stroke-width:0.2;stroke-linejoin:round"
+       x="74.20652"
+       y="73.144241"
+       id="text2"><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-family:'Mona Sans';-inkscape-font-specification:'Mona Sans Heavy';stroke-width:0.2;fill:url(#linearGradient3)"
+         x="74.20652"
+         y="73.144241">Infocomm Club</tspan></text>
+  </g>
+</svg>

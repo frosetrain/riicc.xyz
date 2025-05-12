@@ -1,19 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import { ModeToggle } from "../components/ModeToggle";
-import { Component } from "../components/chart.tsx";
 ---
 
 <Layout title="About">
-    <article class="px-4 max-w-3xl pb-8 mx-auto mt-18">
+    <article class="px-6 sm:px-16 max-w-3xl pb-8 mx-auto mt-18">
         <div>
             <h1 class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">About</h1>
             <p class="leading-7 [&:not(:first-child)]:mt-6">
-                The Raffles Institution Infocomm Club is a place for students to discover their interests in technology. We give every member an
+                The Raffles <u>Institution</u> Infocomm Club is a place for students to discover their interests in technology. We give every member an
                 opportunity to discover new skills, develop their own projects, and grow together with a community.
             </p>
-            <ModeToggle client:load />
             <h2 class="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">Activities</h2>
             <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
                 <li>Robotics</li>

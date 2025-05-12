@@ -15,13 +15,13 @@ export default defineConfig({
 
 	integrations: [react()],
 
-	// experimental: {
-	// 	fonts: [
-	// 		{
-	// 			provider: fontProviders.google(),
-	// 			name: "Mona Sans",
-	// 			cssVariable: "--font-mona-sans",
-	// 		},
-	// 	],
-	// },
+	experimental: {
+		fonts: [
+			{
+				provider: fontProviders.fontsource(),
+				name: "Public Sans",
+				cssVariable: "--font-public-sans",
+			},
+		],
+	},
 });
