@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -14,14 +14,4 @@ export default defineConfig({
 	},
 
 	integrations: [react()],
-
-	experimental: {
-		fonts: [
-			{
-				provider: fontProviders.fontsource(),
-				name: "Public Sans",
-				cssVariable: "--font-public-sans",
-			},
-		],
-	},
 });

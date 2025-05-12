@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 @theme {
-    --font-sans: "Public Sans", system-ui, sans-serif;
+    --font-sans: "Mona Sans Variable", system-ui, sans-serif;
     --text-md: 0.9375rem;
 }
 
