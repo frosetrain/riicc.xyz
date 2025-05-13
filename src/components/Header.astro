@@ -18,7 +18,7 @@ import { buttonVariants } from "@/components/ui/button";
                 <a class={buttonVariants({ variant: "ghost" })} href="/about">About</a>
             </div>
             <div class="flex items-center gap-2 ml-2">
-                <ModeToggle client:load />
+                <ModeToggle client:only="react" />
                 <div class="sm:hidden">
                     <Button variant="outline" size="icon" id="menu" client:load>
                         <Menu id="icon-menu-false" />
