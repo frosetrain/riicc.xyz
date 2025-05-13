@@ -14,12 +14,12 @@ import Footer from "../components/Footer.astro";
 
 <Layout title="">
     <div class="pt-8 px-6 sm:max-w-[80vw] lg:max-w-[70vw] mx-auto floppy-stack">
-        <div class="text-[0px] relative">
-            <Image loading="lazy" class="floppy w-full relative" src={floppy_1} alt="Floppy" />
-            <Image loading="lazy" class="floppy w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
-            <Image loading="lazy" class="floppy w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
-            <Image loading="lazy" class="floppy w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
-            <Image loading="lazy" class="floppy w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
+        <div id="floppy-stack" class="text-[0px] relative">
+            <Image loading="lazy" class="w-full relative" src={floppy_1} alt="Floppy" />
+            <Image loading="lazy" class="w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
+            <Image loading="lazy" class="w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
+            <Image loading="lazy" class="w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
+            <Image loading="lazy" class="w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
         </div>
         <div class="pt-16">
             <Image src={wordmark_ondark} alt="Raffles Institution Infocomm Club" class="w-full hidden dark:block" />
