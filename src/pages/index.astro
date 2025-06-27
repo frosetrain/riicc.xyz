@@ -9,52 +9,65 @@ import wordmark_ondark from "../assets/wordmark-ondark.svg";
 import wordmark_onlight from "../assets/wordmark-onlight.svg";
 import robolab from "../assets/robolab.jpg";
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 ---
 
+<script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { ScrollSmoother } from "gsap/ScrollSmoother";
+    gsap.fromTo("#floppy-stack img", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power2.out", stagger: 0.12 });
+    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    // ScrollSmoother.create({
+    // smooth: 0,
+    // effects: true,
+    // });
+    gsap.registerPlugin(ScrollTrigger);
+
+    // for (const img of document.querySelectorAll("#floppy-stack img")) {
+    //     gsap.fromTo(
+    //         img,
+    //         {
+    //             autoAlpha: 0,
+    //             scale: 0.6,
+    //         },
+    //         {
+    //             autoAlpha: 1,
+    //             scale: 1,
+    //             duration: 0.8,
+    //             ease: "power2.out",
+    //             stagger: 0.12,
+    //             scrollTrigger: {
+    //                 trigger: img,
+    //                 markers: true,
+    //                 start: "top center",
+    //             },
+    //         },
+    //     );
+    // }
+</script>
+
 <Layout title="">
-    <div class="pt-8 px-6 sm:max-w-[80vw] lg:max-w-[70vw] mx-auto floppy-stack">
-        <div id="floppy-stack" class="text-[0px] relative">
-            <Image loading="lazy" class="w-full relative" src={floppy_1} alt="Floppy" />
-            <Image loading="lazy" class="w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
-            <Image loading="lazy" class="w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
-            <Image loading="lazy" class="w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
-            <Image loading="lazy" class="w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
-        </div>
-        <div class="pt-16">
-            <Image src={wordmark_ondark} alt="Raffles Institution Infocomm Club" class="w-full hidden dark:block" />
-            <Image src={wordmark_onlight} alt="Raffles Institution Infocomm Club" class="w-full dark:hidden" />
-        </div>
-    </div>
-    <div class="mx-auto max-w-7xl px-6 mb-16 sm:px-16 w-full text-black dark:text-white">
-        <article class="prose px-4 max-w-3xl pb-8 mx-auto mt-18">
-            <div>
-                <p>
-                    The Raffles Institution Infocomm Club is a place for students to discover their interests in technology. We give every member an
-                    opportunity to discover new skills, develop their own projects, and grow together with a community.
-                </p>
-                <h2>Activities</h2>
-                <ul>
-                    <li>Robotics</li>
-                    <li>CP·IO (Competitive Programming and Informatics Olympiad)</li>
-                    <li>Red (Cybersecurity)</li>
-                    <li>Figma</li>
-                    <li>Meta Digital Skills Programme: Artificial Intelligence</li>
-                    <li>Swift Coding Club</li>
-                </ul>
-                <h2>Competitions</h2>
-                <ul>
-                    <li>National Youth Tech Championship (Champions, 2024)</li>
-                    <li>National Olympiad in Informatics</li>
-                    <li>World Robot Olympiad</li>
-                    <li>IDE Series</li>
-                    <li>Sentinel Challenge</li>
-                    <li>Singapore VEX Tournament</li>
-                </ul>
-                <p>Our CCA sessions are held every Friday from 1.30pm to 3.30pm.</p>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <Header />
+            <div class="max-w-(--breakpoint-xl) px-8 mx-auto floppy-stack">
+                <!-- Stack of floppy images -->
+                <div id="floppy-stack" class="text-[0px] relative">
+                    <Image loading="lazy" data-lag="0.3" class="w-full relative" src={floppy_1} alt="Floppy" />
+                    <Image loading="lazy" data-lag="0.6" class="w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
+                    <Image loading="lazy" data-lag="0.9" class="w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
+                    <Image loading="lazy" data-lag="1.2" class="w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
+                    <Image id="gay" loading="lazy" data-lag="1.5" class="w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
+                </div>
+                <div class="pt-16">
+                    <Image src={wordmark_ondark} alt="Raffles Institution Infocomm Club" class="w-full hidden dark:block" />
+                    <Image src={wordmark_onlight} alt="Raffles Institution Infocomm Club" class="w-full dark:hidden" />
+                </div>
             </div>
-        </article>
-        <Image src={robolab} alt="An RIICC sign in the Robolab." />
+            <div class="max-w-(--breakpoint-xl) px-8 mx-auto"><div class="bg-red-500">amogu</div></div>
+            <Footer />
+        </div>
     </div>
-    <Footer />
 </Layout>
