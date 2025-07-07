@@ -7,6 +7,8 @@ import react from "@astrojs/react";
 
 import svelte from "@astrojs/svelte";
 
+import simpleStackQuery from "simple-stack-query";
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://riicc.xyz",
@@ -15,5 +17,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
 
-    integrations: [react(), svelte()],
+    integrations: [react(), svelte(), simpleStackQuery()],
 });

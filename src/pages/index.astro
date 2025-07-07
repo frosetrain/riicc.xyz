@@ -1,73 +1,152 @@
 ---
 import { Image } from "astro:assets";
-import floppy_1 from "../assets/floppy_1.svg";
-import floppy_2 from "../assets/floppy_2.svg";
-import floppy_3 from "../assets/floppy_3.svg";
-import floppy_4 from "../assets/floppy_4.svg";
-import floppy_5 from "../assets/floppy_5.svg";
-import wordmark_ondark from "../assets/wordmark-ondark.svg";
-import wordmark_onlight from "../assets/wordmark-onlight.svg";
-import robolab from "../assets/robolab.jpg";
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import floppy_1 from "@/assets/floppy_1.svg";
+import floppy_2 from "@/assets/floppy_2.svg";
+import floppy_3 from "@/assets/floppy_3.svg";
+import floppy_4 from "@/assets/floppy_4.svg";
+import floppy_5 from "@/assets/floppy_5.svg";
+import wordmark_ondark from "@/assets/wordmark-ondark.svg";
+import wordmark_onlight from "@/assets/wordmark-onlight.svg";
+import robolab from "@/assets/robolab.jpg";
+import placeholder from "@/assets/placeholder.svg";
+
+import Layout from "@/layouts/Layout.astro";
+
+import BranchCard from "@/components/BranchCard.astro";
+import TimelineEntry from "@/components/TimelineEntry.astro";
+
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+
+import { OctagonAlert } from "@lucide/astro";
 ---
 
 <script>
     import { gsap } from "gsap";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { ScrollSmoother } from "gsap/ScrollSmoother";
+    import DrawSVGPlugin from "gsap/DrawSVGPlugin";
     gsap.fromTo("#floppy-stack img", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power2.out", stagger: 0.12 });
-    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    // ScrollSmoother.create({
-    // smooth: 0,
-    // effects: true,
-    // });
-    gsap.registerPlugin(ScrollTrigger);
-
-    // for (const img of document.querySelectorAll("#floppy-stack img")) {
-    //     gsap.fromTo(
-    //         img,
-    //         {
-    //             autoAlpha: 0,
-    //             scale: 0.6,
-    //         },
-    //         {
-    //             autoAlpha: 1,
-    //             scale: 1,
-    //             duration: 0.8,
-    //             ease: "power2.out",
-    //             stagger: 0.12,
-    //             scrollTrigger: {
-    //                 trigger: img,
-    //                 markers: true,
-    //                 start: "top center",
-    //             },
-    //         },
-    //     );
-    // }
+    gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 </script>
 
 <Layout title="">
-    <div id="smooth-wrapper">
-        <div id="smooth-content">
-            <Header />
-            <div class="max-w-(--breakpoint-xl) px-8 mx-auto floppy-stack">
-                <!-- Stack of floppy images -->
-                <div id="floppy-stack" class="text-[0px] relative">
-                    <Image loading="lazy" data-lag="0.3" class="w-full relative" src={floppy_1} alt="Floppy" />
-                    <Image loading="lazy" data-lag="0.6" class="w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
-                    <Image loading="lazy" data-lag="0.9" class="w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
-                    <Image loading="lazy" data-lag="1.2" class="w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
-                    <Image id="gay" loading="lazy" data-lag="1.5" class="w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
+    <div class="max-w-(--breakpoint-xl) px-8 mx-auto">
+        <!-- Stack of floppy images -->
+        <div id="floppy-stack" class="text-red-500 stroke-1 text-[0px] relative">
+            <Image loading="lazy" data-lag="0.3" class="invisible w-full relative" src={floppy_1} alt="Floppy" />
+            <Image loading="lazy" data-lag="0.6" class="invisible w-full relative -mt-[32%] -z-10" src={floppy_2} alt="Floppy" />
+            <Image loading="lazy" data-lag="0.9" class="invisible w-full relative -mt-[32%] -z-20" src={floppy_3} alt="Floppy" />
+            <Image loading="lazy" data-lag="1.2" class="invisible w-full relative -mt-[32%] -z-30" src={floppy_4} alt="Floppy" />
+            <Image loading="lazy" data-lag="1.5" class="invisible w-full relative -mt-[32%] -z-40" src={floppy_5} alt="Floppy" />
+        </div>
+        <div class="py-16">
+            <Image src={wordmark_ondark} alt="Raffles Institution Infocomm Club" class="w-full hidden dark:block" />
+            <Image src={wordmark_onlight} alt="Raffles Institution Infocomm Club" class="w-full dark:hidden" />
+            <!-- <p class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-center tracking-tight">Raffles Institution</p>
+            <p
+                class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-center tracking-tight bg-clip-text bg-linear-to-r text-transparent from-25% from-emerald-600 to-indigo-600"
+            >
+                Infocomm Club
+            </p> -->
+        </div>
+
+        <div class="h-[26px] bg-[url(/wiggle.svg)]"></div>
+
+        <div class="mb-8 mt-16 flex flex-col sm:flex-row gap-8">
+            <div class="flex-1">
+                <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
+                    A gang of real and not fake people who cannot code and resort to CRIIng instead
+                </p>
+                <p class="leading-7 [&:not(:first-child)]:mt-6">Have you ever noticed that amogus is sus?</p>
+            </div>
+            <div class="sm:w-64 lg:w-[32rem] m-3">
+                <Image src={placeholder} alt="Image" class="rounded-md rotate-[4.5deg] object-cover overflow-hidden" />
+            </div>
+        </div>
+
+        <Separator className="my-8" />
+
+        <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">Activities</p>
+        <p class="leading-7 [&:not(:first-child)]:mt-6">
+            Members choose one branch/activity, and are able to switch branches/activities at certain junctures
+        </p>
+        <Alert variant="default" className="mt-4">
+            <OctagonAlert />
+            <AlertTitle>This is subject to change!</AlertTitle>
+            <AlertDescription>We might be revamping the branch system in the near future.</AlertDescription>
+        </Alert>
+
+        <p class="scroll-m-20 text-2xl mt-16 font-semibold tracking-tight">Branches</p>
+        <p class="text-muted-foreground my-2">Taught by students</p>
+        <div class="grid md:grid-cols-3 gap-4 my-4">
+            <BranchCard
+                name="CP·IO"
+                description="Competitive Programming and Informatics Olympiad: algorithmic programming in C++"
+                image={placeholder}
+            />
+            <BranchCard name="Robotics" description="Build and tinker with LEGO and VEX robots" image={placeholder} />
+            <BranchCard name="Red" description="Ethical hacking, red-teaming and Capture-the-Flag" image={placeholder} />
+        </div>
+
+        <p class="scroll-m-20 text-2xl mt-16 font-semibold tracking-tight">Courses</p>
+        <p class="text-muted-foreground my-2">Taught by IMDA-supported external vendors</p>
+        <div class="grid md:grid-cols-3 gap-4 my-4">
+            <BranchCard name="Figma" description="Create user interfaces and user experiences using this design tool" image={placeholder} />
+            <BranchCard name="Meta AI" description="Learn about AI" image={placeholder} />
+            <BranchCard name="Swift" description="Create iPadOS apps using Apple’s programming language" image={placeholder} />
+        </div>
+
+        <Separator className="my-16" />
+
+        <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">Competitions</p>
+        <ol class="relative border-s mt-8 mb-16 border-border">
+            <TimelineEntry
+                name="IDE Series"
+                description="We went for Robotics, Sprint, Sumo and VEX, and ended up winning nothing."
+                date="May 2025"
+            />
+            <TimelineEntry
+                name="National Olympiad in Informatics"
+                description="Our cut-off point was really low. I think we have a skull issue."
+                date="March 2025"
+            />
+            <TimelineEntry
+                name="World Robot Olympiad"
+                description="We got two teams into the finals. Someone won the best design or something award."
+                date="September 2024"
+            />
+            <TimelineEntry name="National Youth Tech Championship" description="Champions" date="June–August 2024" />
+        </ol>
+
+        <Separator className="my-16" />
+
+        <div class="mb-16 flex gap-8 flex-col sm:flex-row justify-between">
+            <div>
+                <p class="text-primary text-xl">Limitations?</p>
+                <p class="scroll-m-20 text-4xl mt-4 font-extrabold tracking-tight text-balance">What are limitations, and are they edible?</p>
+                <p class="leading-7 [&:not(:first-child)]:mt-6">RIICC has an interesting problem: too many members but too little time.</p>
+            </div>
+            <div class="grid gap-8 sm:grid-cols-2 md:gap-16">
+                <div class="flex flex-col">
+                    <div class="font-mono tracking-tight mb-2 text-4xl font-bold">120+</div>
+                    <div class="text-muted-foreground text-sm">members</div>
                 </div>
-                <div class="pt-16">
-                    <Image src={wordmark_ondark} alt="Raffles Institution Infocomm Club" class="w-full hidden dark:block" />
-                    <Image src={wordmark_onlight} alt="Raffles Institution Infocomm Club" class="w-full dark:hidden" />
+                <div class="flex flex-col">
+                    <div class="font-mono tracking-tight mb-2 text-4xl font-bold">2006</div>
+                    <div class="text-muted-foreground text-sm">established</div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="font-mono tracking-tight mb-2 text-4xl font-bold">2</div>
+                    <div class="text-muted-foreground text-sm">hours of CCA per week</div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="font-mono tracking-tight mb-2 text-4xl font-bold">7</div>
+                    <div class="text-muted-foreground text-sm">rooms used for sessions</div>
                 </div>
             </div>
-            <div class="max-w-(--breakpoint-xl) px-8 mx-auto"><div class="bg-red-500">amogu</div></div>
-            <Footer />
         </div>
+
+        <Image src={robolab} alt="RIICC logo" class="mb-8 rounded-md shadow-md" />
     </div>
 </Layout>

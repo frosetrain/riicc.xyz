@@ -2,13 +2,16 @@
 import { X, Menu } from "@lucide/astro";
 import { ModeToggle } from "@/components/ModeToggle";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import riiccOnDark from "@/assets/riicc-ondark.svg";
+import riiccOnLight from "@/assets/riicc-onlight.svg";
 ---
 
 <header id="site-header" class="w-full bg-white dark:bg-neutral-950 bg-[url('/diagonal-stripes.svg')] z-20 bg-repeat-x relative">
     <nav class="mx-auto flex max-w-(--breakpoint-xl) items-center justify-between py-4 px-8">
         <a href="/">
-            <img src="/riicc-onlight.svg" class="h-10 w-auto dark:hidden" />
-            <img src="/riicc-ondark.svg" class="hidden h-10 w-auto dark:block" />
+            <Image src={riiccOnLight} alt="RIICC logo" class="h-10 w-auto dark:hidden" />
+            <Image src={riiccOnDark} alt="RIICC logo" class="hidden h-10 w-auto dark:block" />
         </a>
         <div class="flex items-center">
             <div class="hidden sm:flex">

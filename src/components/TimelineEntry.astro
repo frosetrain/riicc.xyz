@@ -1,0 +1,11 @@
+---
+import { Image } from "astro:assets";
+const { name, description, date, image } = Astro.props;
+---
+
+<li class="mb-10 ms-4">
+    <div class="absolute w-2 h-2 bg-primary rounded-full mt-2 -start-1"></div>
+    <time class="mb-1 text-primary text-sm">{date}</time>
+    <h3 class="scroll-m-20 text-xl font-semibold tracking-tight my-1">{name}</h3>
+    <p class="mb-4 leading-7">{description}</p>
+</li>
