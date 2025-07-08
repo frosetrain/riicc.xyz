@@ -1,0 +1,106 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Button } from "@/components/ui/button";
+import { Download, FileText, Scale } from "@lucide/astro";
+import { Badge } from "@/components/ui/badge";
+---
+
+<Layout title="About">
+    <div class="max-w-3xl px-8 mx-auto mt-8">
+        <h1 class="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance">Merch 2025</h1>
+        <p class="leading-7 [&:not(:first-child)]:mt-6">
+            This project was initiated in November 2024, as a collaboration between the EXCOs of batches 26Y and 27Y. We ended up using five different
+            quotes from the supplier before sending the final version for printing.
+        </p>
+        <ul class="my-6 ml-6 list-disc [&>li]:mt-2">
+            <li>27 November 2024: Planning started</li>
+            <li>29 November 2024: Design competition, open to all members (we had a total of 2 submissions)</li>
+            <li>11 January 2025: Version 0.1.0</li>
+            <li>24 January 2025: Version 0.2.0</li>
+            <li>4 February 2025: Version 0.3.0</li>
+            <li>7 February 2025: Voting for merch design</li>
+            <li>28 February 2025: Orders opened</li>
+            <li>17 March 2025: Orders closed</li>
+            <li>12 April 2025: Version 1.0.0-rc.1</li>
+            <li>15 April 2025: Version 1.0.0</li>
+            <li>11 July 2025: Shipped!</li>
+        </ul>
+        <h2 class="mt-6 mb-2 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">Planning document</h2>
+        <a href="/merch-planning.txt">
+            <Button variant="outline" size="sm">
+                <FileText />View plain text
+            </Button>
+        </a>
+        <h2 class="mt-6 mb-2 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">Design file</h2>
+        <a href="/merch-design.svg" download>
+            <Button variant="outline" size="sm">
+                <Download />Download (Inkscape SVG)
+            </Button>
+        </a>
+        <h2 class="mt-6 mb-2 scroll-m-20 border-b text-3xl font-semibold tracking-tight first:mt-0">Credits</h2>
+        <div class="mt-2 mb-6 w-full overflow-y-auto">
+            <table class="w-full">
+                <tbody>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Designer</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Qin Zixi</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Operations</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Lau Jing Xian</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td rowspan="4" class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Merch Team</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Zachary Choy Kit Chun</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Venkatesan Sriram</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Lashawn Li Lexuan</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Josiah Ezra Menon</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Contributor</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Yeong Jie Kai Ignatius</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Supplier</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Butter Prints</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Designed with</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Inkscape</td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td rowspan="3" class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">Typefaces</td>
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                            Hubot Sans <Badge variant="secondary">
+                                <Scale />
+                                SIL 1.1
+                            </Badge>
+                        </td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                            Iosevka <Badge variant="secondary">
+                                <Scale />
+                                SIL 1.1
+                            </Badge>
+                        </td>
+                    </tr>
+                    <tr class="m-0 border-t p-0">
+                        <td class="border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right">
+                            Doto <Badge variant="secondary">
+                                <Scale />
+                                SIL 1.1
+                            </Badge>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</Layout>

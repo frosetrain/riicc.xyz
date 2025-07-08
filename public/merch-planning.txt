@@ -1,0 +1,35 @@
+﻿Merch planning doc
+
+
+1. Ideas (tick means created)
+   1. ✅ inside a floppy disk with descriptions on the right and lines connecting them
+   2. 💀 patchy patches ligature art in JetBrains Mono; photo credit: yunze (im am screwing this)
+   3. ✅ iOS icon grid with a Heroicon inside
+   4. ✅ Infocomm on a variable axis
+   5. ✅ ISO 3864 warning sign (read the friendly manual)
+   6. ✅  { •_• }
+   7. ✅ It’s not a bug, it’s a feature
+2. Design
+   1. Designer: Zixi + design comp ideas + iggi + references
+   2. Decide on design parameters
+      1. Hoodie color (dark or light mode)
+         1. Dark: Navy Pro
+         2. Light: Ash Grey
+      2. Front: A3, 2 colors (white and green)
+      3. Back: A3, 2 colors (white and green)
+   3. Front: Floppy on bottom right, labels on bottom left with connections, logo on top left
+   4. Back: Raffles Institution Infocomm Club at top, box-drawing frame incorporating different things inside
+3. Timeline
+   1. Preliminary draft done by 15 December 2024 (Zixi) 
+   2. Fake design competition until 14 Dec (Sriram) https://tally.so/r/w2bYKV 
+   3. Suppliers found by 15 December 2024 (Jing Xian)
+   4. First draft done by T1W4
+      1. Designs sent to suppliers + quota obtained + prices
+   5. Send submission form by T1W8
+4. Supplier
+   1. Butterprints https://www.butterprints.com.sg/hoodies-with-zip
+5. Money
+   1. Subsidise using cca budget
+
+
+By submitting your design here, you agree to license your work under CC BY 4.0.
