@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
-import { OctagonAlert } from "@lucide/astro";
+import { OctagonAlert, Construction } from "@lucide/astro";
 ---
 
 <script>
@@ -32,6 +32,12 @@ import { OctagonAlert } from "@lucide/astro";
 
 <Layout title="">
     <div class="max-w-(--breakpoint-xl) px-8 mx-auto">
+        <Alert variant="destructive" className="mt-4 max-w-(--breakpoint-sm) mx-auto">
+            <Construction />
+            <AlertTitle>Under construction</AlertTitle>
+            <AlertDescription>Please ignore the presently goofy state of this incomplete website.</AlertDescription>
+        </Alert>
+
         <!-- Stack of floppy images -->
         <div id="floppy-stack" class="text-red-500 stroke-1 text-[0px] relative">
             <Image loading="lazy" data-lag="0.3" class="invisible w-full relative" src={floppy_1} alt="Floppy" />
