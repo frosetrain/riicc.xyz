@@ -17,15 +17,40 @@ const { title } = Astro.props;
         if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
             return localStorage.getItem("theme");
         }
-        return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        return "system"; // Default to system preference
     };
-    const isDark = getThemePreference() === "dark";
-    document.documentElement.classList[isDark ? "add" : "remove"]("dark");
 
+    const applyTheme = (theme) => {
+        const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+    };
+
+    // Initial theme application
+    const currentTheme = getThemePreference();
+    applyTheme(currentTheme);
+
+    // Listen for system theme changes when system is selected
+    const setupSystemThemeListener = () => {
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handleSystemThemeChange = () => {
+            const savedTheme = localStorage.getItem("theme") || "system";
+            if (savedTheme === "system") {
+                applyTheme("system");
+            }
+        };
+
+        mediaQuery.addEventListener("change", handleSystemThemeChange);
+        return () => mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    };
+
+    // Set up the system theme listener
+    setupSystemThemeListener();
+
+    // Observer for theme changes from the UI
     if (typeof localStorage !== "undefined") {
         const observer = new MutationObserver(() => {
-            const isDark = document.documentElement.classList.contains("dark");
-            localStorage.setItem("theme", isDark ? "dark" : "light");
+            // This observer is mainly for sync purposes,
+            // the actual theme management is handled by the React component
         });
         observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
     }

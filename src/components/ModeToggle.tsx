@@ -5,16 +5,34 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
-    const [theme, setThemeState] = React.useState<"theme-light" | "dark" | "system">("theme-light");
+    const [theme, setThemeState] = React.useState<"light" | "dark" | "system">("system");
 
     React.useEffect(() => {
-        const isDarkMode = document.documentElement.classList.contains("dark");
-        setThemeState(isDarkMode ? "dark" : "theme-light");
+        // Get theme from localStorage or default to system
+        const savedTheme = localStorage.getItem("theme") || "system";
+        setThemeState(savedTheme as "light" | "dark" | "system");
     }, []);
 
     React.useEffect(() => {
-        const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-        document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+        const applyTheme = (currentTheme: string) => {
+            const isDark = currentTheme === "dark" || (currentTheme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+            document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+        };
+
+        // Apply theme immediately
+        applyTheme(theme);
+
+        // Save to localStorage
+        localStorage.setItem("theme", theme);
+
+        // Listen for system theme changes when system is selected
+        if (theme === "system") {
+            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+            const handleChange = () => applyTheme(theme);
+
+            mediaQuery.addEventListener("change", handleChange);
+            return () => mediaQuery.removeEventListener("change", handleChange);
+        }
     }, [theme]);
 
     return (
@@ -27,9 +45,15 @@ export function ModeToggle() {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setThemeState("theme-light")}>Light</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setThemeState("dark")}>Dark</DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setThemeState("system")}>System</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setThemeState("light")} className={theme === "light" ? "bg-accent" : ""}>
+                    Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setThemeState("dark")} className={theme === "dark" ? "bg-accent" : ""}>
+                    Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setThemeState("system")} className={theme === "system" ? "bg-accent" : ""}>
+                    System
+                </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
     );
