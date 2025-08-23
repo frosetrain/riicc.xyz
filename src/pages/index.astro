@@ -61,10 +61,8 @@ import { OctagonAlert, Construction } from "@lucide/astro";
 
         <div class="mb-8 mt-16 flex flex-col sm:flex-row gap-8">
             <div class="flex-1">
-                <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">
-                    A gang of real and not fake people who cannot code and resort to CRIIng instead
-                </p>
-                <p class="leading-7 [&:not(:first-child)]:mt-6">Have you ever noticed that amogus is sus?</p>
+                <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">We are an Infocomm club</p>
+                <p class="leading-7 [&:not(:first-child)]:mt-6">We do Infocomm things</p>
             </div>
             <div class="sm:w-64 lg:w-[32rem] m-3">
                 <Image src={placeholder} alt="Image" class="rounded-md rotate-[4.5deg] object-cover overflow-hidden" />
@@ -106,23 +104,32 @@ import { OctagonAlert, Construction } from "@lucide/astro";
         <Separator className="my-16" />
 
         <p class="scroll-m-20 text-4xl font-extrabold tracking-tight text-balance">Competitions</p>
+        <p class="text-muted-foreground mt-4">Showing competitions from 2024 and 2025</p>
         <ol class="relative border-s mt-8 mb-16 border-border">
+            <TimelineEntry name="International Olympiad in Informatics" description="Gold (individual)" date="27 July to 3 August 2025" />
+            <TimelineEntry
+                name="National Youth Tech Championship"
+                description="9th-placed school, in a very long competition involving drones, robots and some semblance of AI"
+                date="12 March to 18 July 2025"
+            />
+            <TimelineEntry name="IDE Series" description="Participated in Robotics, Sprint, Sumo and VEX VRC" date="28 May 2025" />
+            <TimelineEntry name="Asia-Pacific Informatics Olympiad" description="Silver (individual)" date="17 May to 18 May 2025" />
+            <TimelineEntry name="National Olympiad in Informatics" description="2 gold, 1 silver, 1 bronze" date="22 March 2025" />
+            <TimelineEntry name="Singapore VEX Tournament" description="Debut of VEX team 3717" date="9 November 2024" />
+            <TimelineEntry name="International Olympiad in Informatics" description="Silver (individual)" date="1 September to 8 September 2024" />
+            <TimelineEntry
+                name="World Robot Olympiad (Singapore Nationals)"
+                description="8th (Robomission Senior); Design Award (Robomission Senior); Finalists (Robomission Junior)"
+                date="5 September to 7 September 2024"
+            />
+            <TimelineEntry name="National Youth Tech Championship" description="Champions of Season 2" date="29 June to 24 August 2024" />
             <TimelineEntry
                 name="IDE Series"
-                description="We went for Robotics, Sprint, Sumo and VEX, and ended up winning nothing."
-                date="May 2025"
+                description="Robotics (Sec) 9th; Judges’ Award (VEX VIQRC); Energy Award (VEX V5RC)"
+                date="21 May 2024"
             />
-            <TimelineEntry
-                name="National Olympiad in Informatics"
-                description="Our cut-off point was really low. I think we have a skull issue."
-                date="March 2025"
-            />
-            <TimelineEntry
-                name="World Robot Olympiad"
-                description="We got two teams into the finals. Someone won the best design or something award."
-                date="September 2024"
-            />
-            <TimelineEntry name="National Youth Tech Championship" description="Champions" date="June–August 2024" />
+            <TimelineEntry name="Asia-Pacific Informatics Olympiad" description="Silver (individual)" date="18 May 2024" />
+            <TimelineEntry name="National Olympiad in Informatics" description="2nd runner-up (individual), 3 gold, 2 silver" date="16 March 2024" />
         </ol>
 
         <Separator className="my-16" />
